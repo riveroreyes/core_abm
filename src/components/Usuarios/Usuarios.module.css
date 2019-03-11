@@ -1,13 +1,13 @@
-.Clientes {
+.Usuarios {
     margin:auto;
-    width: 50%;
+    width: 100%;
   }
   
-  .Clientes h1{
+  .Usuarios h1{
     text-align: center;
   }
   
-  .Clientes table{
+  .Usuarios table{
     list-style: none;
     width: 100%;
   }
@@ -36,7 +36,7 @@
     margin-top: 20px;
   }
   
-  .Clientes th{
+  .Usuarios th{
     text-align: left;
   }
   

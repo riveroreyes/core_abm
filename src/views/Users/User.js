@@ -1,15 +1,38 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
+import API from '../../api';
 
-import usersData from './UsersData'
+// import usersData from './UsersData'
 
 class User extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      usuario: null
+    }
+  }
+
+  getUser = () => {
+    API.get("usuarios/" + this.props.match.params.id).then(response => {
+      this.setState({usuario: response.data});
+      console.log(response.data);
+    }).catch(error => {
+      console.log(error);
+    })
+  }
+
+  componentDidMount() {
+    this.getUser();
+  }
+
   render() {
 
-    const user = usersData.find( user => user.id.toString() === this.props.match.params.id)
+    //const user = this.state.usuarios.find( user => user.id.toString() === this.props.match.params.id );
 
-    const userDetails = user ? Object.entries(user) : [['id', (<span><i className="text-muted icon-ban"></i> Not found</span>)]]
+    //const user = usersData.find( user => user.id.toString() === this.props.match.params.id)
+
+    const userDetails = this.state.usuario ? Object.entries(this.state.usuario) : [['id', (<span><i className="text-muted icon-ban"></i> Not found</span>)]]
 
     return (
       <div className="animated fadeIn">
@@ -26,8 +49,8 @@ class User extends Component {
                         userDetails.map(([key, value]) => {
                           return (
                             <tr key={key}>
-                              <td>{`${key}:`}</td>
-                              <td><strong>{value}</strong></td>
+                              <td style={{textTransform: 'capitalize'}}><strong>{`${key}:`}</strong></td>
+                              <td>{value}</td>
                             </tr>
                           )
                         })

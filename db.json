@@ -1,34 +1,40 @@
 {
-  "clientes": [
+  "usuarios": [
     {
       "name": "Carlos Alexander",
       "lastname": "Rivero Bautista",
-      "id": 1
+      "id": 1,
+      "address": "Pepe 3243"
     },
     {
       "name": "Maria Balbina",
       "lastname": "Rivero Quintero",
-      "id": 2
+      "id": 2,
+      "address": "Pepe 3243"
     },
     {
       "name": "Cheila Pastora",
       "lastname": "Mora Hernandez",
-      "id": 3
+      "id": 3,
+      "address": "Pepe 3243"
     },
     {
       "name": "Carlos Alexander",
       "lastname": "Mora Hernandez",
-      "id": 4
+      "id": 4,
+      "address": "Pepe 3243"
     },
     {
       "name": "Jesus Olivier",
       "lastname": "Rivero",
-      "id": 5
+      "id": 5,
+      "address": "Pepe 3243"
     },
     {
       "name": "Pablo Andrés",
       "lastname": "Bonillo",
-      "id": 7
+      "id": 7,
+      "address": "Pepe 3243"
     }
   ]
 }

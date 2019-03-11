@@ -15,7 +15,7 @@ const myList = (props) => {
           </thead>
           <tbody>
             {
-              props.clientes.map((el, index) =>
+              props.usuarios.map((el, index) =>
                 <tr key={el.id} className={classes.myList}>
                   <td>{index + 1}.- {el.name} {el.lastname}</td>
                   <td>
